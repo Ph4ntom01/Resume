@@ -1,0 +1,143 @@
+/*************** Media Queries ***************/
+
+@media screen and (max-width: 1407px) {
+    #home .fa-code {
+        width: 100px;
+        height: auto;
+    }
+
+    #portfolio .card .container {
+        flex-direction: column;
+    }
+
+    #portfolio .level:first-child {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .home-title {
+        font-size: 4rem;
+    }
+
+    .timeline {
+        max-width: 80%;
+        padding-top: 10px;
+    }
+
+    .timeline .event .title {
+        margin-top: 5rem;
+    }
+
+    .timeline .event:before {
+        top: -50px;
+        left: 0px;
+        content: attr(data-date);
+        min-width: 120px;
+        color: #b5b5b5;
+    }
+
+    .timeline .event:after {
+        top: -44px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .switch {
+        width: 50px;
+        height: 26px;
+    }
+
+    .switch span:before {
+        font-size: 14px;
+        left: 3px;
+        bottom: 1px;
+    }
+
+    .switch input:checked + span:before {
+        transform: translateX(20px);
+    }
+
+    #home .column.is-two-thirds {
+        text-align: center;
+        padding-left: 0.75rem !important;
+        width: 100%;
+    }
+
+    #home .column:not(:first-child) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #btnScrollTop {
+        width: 40px;
+        height: 40px;
+        bottom: 40px;
+        right: 40px;
+    }
+
+    #btnScrollTop > .icon-size {
+        width: 20px !important;
+        height: auto !important;
+    }
+
+    .fa-chevron-up {
+        width: 20px !important;
+        height: auto !important;
+    }
+
+    #home .column.is-two-thirds {
+        text-align: center;
+        padding-left: 0.75rem !important;
+    }
+
+    #home .column.is-2.is-offset-1 {
+        display: none;
+    }
+
+    .home-subtitle {
+        margin-bottom: 0.75rem;
+    }
+
+    form {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    form .control > .icon {
+        font-size: 1rem !important;
+    }
+
+    footer > .columns > .column:first-child {
+        padding-bottom: 0;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-nav-item:not(:last-child):after {
+        content: "";
+    }
+
+    .social-icon > a > .icon-size {
+        width: 30px !important;
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home-title span {
+        display: none;
+    }
+
+    .home-title:after {
+        content: "Orlando";
+    }
+
+    form {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}

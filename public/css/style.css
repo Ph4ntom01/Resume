@@ -1,0 +1,326 @@
+/*************** All the page ***************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+.section-title {
+    font-size: 4rem;
+}
+
+#btnScrollTop {
+    position: fixed;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms, visibility 500ms, color 500ms;
+    color: whitesmoke;
+}
+
+#btnScrollTop:hover {
+    cursor: pointer;
+}
+
+#btnScrollTop.btn-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-item:hover > span,
+#btnScrollTop:hover,
+.footer-nav-item > a:hover,
+footer .socials > .social-icon > a:hover {
+    color: #23d160;
+    transition: color 200ms ease;
+}
+
+/*************** Dark Mode ***************/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 31px;
+    z-index: 31;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #dbdbdb;
+    border: 2px solid #363636;
+}
+
+.switch span:before {
+    position: absolute;
+    content: "\2600 \FE0F";
+    font-size: 18px;
+    left: 5px;
+    bottom: 0px;
+    transition: transform 300ms ease-out 100ms;
+    -webkit-transition: transform 300ms ease-out 100ms;
+}
+
+.switch input:checked + span {
+    background-color: #77dd77;
+}
+
+.switch input:checked + span:before {
+    content: "\1F311";
+    transform: translateX(22px);
+}
+
+.switch span.round {
+    border-radius: 34px;
+}
+
+.switch span.round:before {
+    border-radius: 34px;
+}
+
+/*************** Home ***************/
+
+.navbar-item span,
+.home-title,
+.subtitle-animation span {
+    transition: color 200ms ease-out;
+}
+
+#home .fa-code {
+    width: 120px;
+    height: auto;
+}
+
+.home-title {
+    font-size: 5rem;
+}
+
+.subtitle-animation.dark span {
+    color: #77dd77;
+}
+
+.subtitle-animation.light span {
+    color: #209cee;
+}
+
+#home .button {
+    transition: background-color 300ms ease-out, color 300ms ease-out, border 800ms ease-out;
+}
+
+#home .button:hover {
+    transition: background-color 300ms ease-in;
+}
+
+#home .button.is-dark:hover {
+    animation: pulse-button-home-dark 1400ms infinite;
+    -webkit-animation: pulse-button-home-dark 1400ms infinite;
+    -moz-animation: pulse-button-home-dark 1400ms infinite;
+}
+
+#home .button.is-light:hover {
+    animation: pulse-button-home-light 1400ms infinite;
+    -webkit-animation: pulse-button-home-light 1400ms infinite;
+    -moz-animation: pulse-button-home-light 1400ms infinite;
+}
+
+@keyframes pulse-button-home-dark {
+    0% {
+        box-shadow: 0 0 0 0 whitesmoke;
+        -webkit-box-shadow: 0 0 0 0 whitesmoke;
+        -moz-box-shadow: 0 0 0 0 whitesmoke;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px #363636;
+        -webkit-box-shadow: 0 0 0 10px #363636;
+        -moz-box-shadow: 0 0 0 10px #363636;
+    }
+}
+
+@keyframes pulse-button-home-light {
+    0% {
+        box-shadow: 0 0 0 0 #363636;
+        -webkit-box-shadow: 0 0 0 0 #363636;
+        -moz-box-shadow: 0 0 0 0 #363636;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px whitesmoke;
+        -webkit-box-shadow: 0 0 0 10px whitesmoke;
+        -moz-box-shadow: 0 0 0 10px whitesmoke;
+    }
+}
+
+/*************** Portfolio ***************/
+
+#portfolio .card {
+    border-radius: 0;
+    box-shadow: 0px 3px 20px 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 20px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out;
+}
+
+#portfolio .card:hover {
+    transform: translateY(-10px);
+}
+
+/*************** Experience ***************/
+
+#experience hr {
+    height: 1px;
+    opacity: 0.2;
+}
+
+.timeline {
+    border-left: 4px solid #209cee;
+    background: rgba(255, 255, 255, 0.03);
+    margin: 0 auto;
+    position: relative;
+    padding: 50px;
+    list-style: none;
+    max-width: 60%;
+}
+
+.timeline ul {
+    list-style-type: square;
+}
+
+.timeline ul li {
+    margin-top: 0.5rem;
+}
+
+.timeline-top {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 30px;
+}
+
+.timeline-bottom {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 30px;
+}
+
+.timeline .event {
+    position: relative;
+}
+
+.timeline .event:before {
+    position: absolute;
+    top: 10px;
+    left: -240px;
+    content: attr(data-date);
+    min-width: 120px;
+    color: #b5b5b5;
+}
+
+.timeline .event:after {
+    position: absolute;
+    top: 16px;
+    left: -57.85px;
+    content: "";
+    box-shadow: 0 0 0 4px #209cee;
+    background: #209cee;
+    border: 2px solid #363636;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+}
+
+/*************** Contact ***************/
+
+form > .field > .control > .button.dark,
+form > .field > .control > .button.light {
+    position: relative;
+    transition: color 800ms ease, border-color 150ms ease-in;
+    overflow: hidden;
+}
+
+form > .field > .control > .button.dark {
+    background-color: transparent;
+}
+
+form > .field > .control > .button.dark:hover {
+    border-color: transparent;
+    color: #363636 !important;
+}
+
+form > .field > .control > .button.light:hover {
+    border-color: whitesmoke;
+    color: white !important;
+}
+
+form > .field > .control > .button.dark::before,
+form > .field > .control > .button.light::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+}
+
+form > .field > .control > .button.dark::before {
+    background-color: whitesmoke;
+}
+
+form > .field > .control > .button.light::before {
+    background-color: #363636;
+}
+
+form > .field > .control > .button:hover::before {
+    width: 100%;
+    transition: width 400ms ease-in-out 100ms;
+}
+
+form > .field > .control > .button > span {
+    z-index: 1;
+}
+
+/*************** Footer ***************/
+
+footer hr {
+    height: 1px;
+    opacity: 0.4 !important;
+}
+
+footer a {
+    color: inherit;
+}
+
+.footer-nav {
+    position: relative;
+}
+
+.footer-nav-item {
+    margin: 0 8px 0 8px;
+}
+
+.footer-nav-item:not(:last-child):after {
+    position: absolute;
+    content: " - ";
+    padding-left: 6px;
+}
+
+#btnScrollTop > .icon-size,
+.social-icon > a > .icon-size {
+    width: 40px !important;
+    height: auto !important;
+}

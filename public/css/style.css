@@ -228,7 +228,6 @@ footer .socials > .social-icon > a:hover {
     left: -240px;
     content: attr(data-date);
     min-width: 120px;
-    color: #b5b5b5;
 }
 
 .timeline .event:after {
@@ -238,7 +237,6 @@ footer .socials > .social-icon > a:hover {
     content: "";
     box-shadow: 0 0 0 4px #209cee;
     background: #209cee;
-    border: 2px solid #363636;
     border-radius: 50%;
     height: 11px;
     width: 11px;
@@ -305,18 +303,10 @@ footer a {
     color: inherit;
 }
 
-.footer-nav {
-    position: relative;
-}
-
-.footer-nav-item {
-    margin: 0 8px 0 8px;
-}
-
-.footer-nav-item:not(:last-child):after {
-    position: absolute;
+.footer-nav-item:not(:last-child)::after {
     content: " - ";
     padding-left: 6px;
+    padding-right: 6px;
 }
 
 #btnScrollTop > .icon-size,

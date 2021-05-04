@@ -34,7 +34,7 @@ navbarEnd.addEventListener("click", function () {
 
 /*************** Dark Mode ***************/
 
-const btnTheme = document.querySelector("#btnTheme");
+/*const btnTheme = document.querySelector("#btnTheme");
 const heroes = document.querySelectorAll(".hero");
 const navbar = document.querySelector("#home .navbar");
 const homeSub = document.querySelector(".subtitle-animation");
@@ -92,7 +92,7 @@ btnTheme.addEventListener("change", () => {
     } else {
         footerBulma.src = "https://bulma.io/images/made-with-bulma--dark.png";
     }
-});
+});*/
 
 /*************** Home ***************/
 
